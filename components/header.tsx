@@ -1,5 +1,6 @@
 'use client';
 
+import clsx from 'clsx';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
@@ -21,9 +22,13 @@ const Header = () => {
 					<Link
 						key={link.name}
 						href={link.href}
-						className={`text-sm sm:text-base md:text-lg font-medium hover:text-purple-700 transition-colors duration-300 font-[poppins] ${
-							isActive(link.href) ? 'text-purple-700' : 'text-white'
-						}`}
+						className={clsx(
+							'text-sm sm:text-base md:text-lg font-medium hover:text-purple-700 transition-colors duration-300 font-[poppins]',
+							{
+								'text-purple-700': isActive(link.href),
+								'text-neutral-200': !isActive(link.href),
+							}
+						)}
 					>
 						{link.name}
 					</Link>
