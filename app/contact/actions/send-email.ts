@@ -1,21 +1,9 @@
 'use server';
 
 import { Resend } from 'resend';
+import { EmailFormState, SendEmailData } from '../types/email.types';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
-
-export type SendEmailData = {
-	name: string;
-	email: string;
-	subject: string;
-	message: string;
-};
-
-export type EmailFormState = {
-	success?: boolean;
-	error?: string | null;
-	message?: string;
-};
 
 export const sendEmail = async (
 	prevState: EmailFormState,
