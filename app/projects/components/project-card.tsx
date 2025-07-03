@@ -1,3 +1,4 @@
+import clsx from 'clsx';
 import Image, { StaticImageData } from 'next/image';
 
 type CardProps = {
@@ -17,7 +18,10 @@ const ProjectCard = ({
 }: CardProps) => {
 	return (
 		<div
-			className={`mt-3 flex flex-col lg:flex-${reverse ? 'row-reverse' : 'row'} lg:items-start lg:gap-8`}
+			className={clsx('mt-3 flex flex-col lg:items-start lg:gap-8', {
+				'lg:flex-row-reverse': reverse,
+				'lg:flex-row': !reverse,
+			})}
 		>
 			<div className='flex flex-col items-start w-full lg:w-1/2'>
 				<h1 className='text-white text-2xl sm:text-3xl lg:text-4xl font-bold font-[poppins] mt-10'>
