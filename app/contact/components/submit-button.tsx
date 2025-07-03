@@ -16,7 +16,7 @@ const SubmitButton = () => {
 			<button
 				type='submit'
 				formAction={formAction}
-				className='w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white font-medium py-3 px-6 rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-200 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 cursor-pointer'
+				className='w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white font-medium py-3 px-6 rounded-lg hover:from-blue-600 hover:to-purple-700 transition duration-200 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 cursor-pointer'
 			>
 				{isPending ? 'Sending...' : 'Send Message'}
 			</button>

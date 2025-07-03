@@ -1,4 +1,4 @@
-import SubmitButton from './submit-button'
+import SubmitButton from './submit-button';
 
 const Form = () => {
 	return (
@@ -8,70 +8,58 @@ const Form = () => {
 			</h2>
 			<form className='space-y-6'>
 				<div>
-					<label
-						htmlFor='name'
-						className='block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2'
-					>
+					<label htmlFor='name' className='label'>
 						Name
 					</label>
 					<input
-						type='text'
-						id='name'
-						name='name'
-						className='w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white'
-						placeholder='Your name'
 						required
+						id='name'
+						type='text'
+						name='name'
+						className='input'
+						placeholder='Your name'
 					/>
 				</div>
 
 				<div>
-					<label
-						htmlFor='email'
-						className='block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2'
-					>
+					<label htmlFor='email' className='label'>
 						Email
 					</label>
 					<input
-						type='email'
-						id='email'
-						name='email'
-						className='w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white'
-						placeholder='your.email@example.com'
 						required
+						id='email'
+						type='email'
+						name='email'
+						className='input'
+						placeholder='your.email@example.com'
 					/>
 				</div>
 
 				<div>
-					<label
-						htmlFor='subject'
-						className='block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2'
-					>
+					<label htmlFor='subject' className='label'>
 						Subject
 					</label>
 					<input
+						required
 						type='text'
 						id='subject'
 						name='subject'
-						className='w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white'
+						className='input'
 						placeholder='What is this about?'
-						required
 					/>
 				</div>
 
 				<div>
-					<label
-						htmlFor='message'
-						className='block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2'
-					>
+					<label htmlFor='message' className='label'>
 						Message
 					</label>
 					<textarea
+						rows={6}
+						required
 						id='message'
 						name='message'
-						rows={6}
-						className='w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white resize-vertical'
+						className='input'
 						placeholder='Your message...'
-						required
 					/>
 				</div>
 
