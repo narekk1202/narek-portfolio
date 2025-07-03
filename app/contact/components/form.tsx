@@ -1,3 +1,5 @@
+import SubmitButton from './submit-button'
+
 const Form = () => {
 	return (
 		<div className='w-full flex flex-col lg:w-1/2 max-lg:mt-10'>
@@ -73,12 +75,7 @@ const Form = () => {
 					/>
 				</div>
 
-				<button
-					type='submit'
-					className='w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white font-medium py-3 px-6 rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-200 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2'
-				>
-					Send Message
-				</button>
+				<SubmitButton />
 			</form>
 		</div>
 	);
