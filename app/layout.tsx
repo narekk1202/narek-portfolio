@@ -1,7 +1,9 @@
 import Header from '@/components/header';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import type { Metadata } from 'next';
 import { Poppins } from 'next/font/google';
 import NextTopLoader from 'nextjs-toploader';
+import { Analytics } from "@vercel/analytics/next"
 import './globals.css';
 
 const poppins = Poppins({
@@ -12,7 +14,8 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
 	title: 'Narek Dunamalyan | Portfolio',
-	description: 'Portfolio of Narek Dunamalyan, a software engineer specializing in web development, with a focus on React, Next.js, and TypeScript.',
+	description:
+		'Portfolio of Narek Dunamalyan, a software engineer specializing in web development, with a focus on React, Next.js, and TypeScript.',
 };
 
 export default function RootLayout({
@@ -22,7 +25,11 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang='en'>
-			<body className={`${poppins.variable} antialiased bg-gradient-to-r from-zinc-900 via-slate-800 to-purple-900 text-white`}>
+			<body
+				className={`${poppins.variable} antialiased bg-gradient-to-r from-zinc-900 via-slate-800 to-purple-900 text-white`}
+			>
+				<SpeedInsights />
+				<Analytics />
 				<NextTopLoader color='#7c3aed' showSpinner={false} />
 				<Header />
 				{children}
